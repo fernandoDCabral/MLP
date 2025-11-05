@@ -2,7 +2,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from Classe_MPL import MultilayerPerceptron
-#from redes_neurais.MultilayerPerceptron import MultilayerPerceptron
+
 
 class MonteCarloValidatorMLP:
     def __init__(self, X, y, topologia, learning_rate=1e-3, max_epoch=200, R=500, random_state=None):
