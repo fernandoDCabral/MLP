@@ -37,7 +37,7 @@ plt.show()'''
 
 
 # ================================================================
-# 3. Treino inicial fixo (visualização da fronteira de decisão)
+# 3. Treino inicial fixo (mudar para o casode under e over)
 # ================================================================
 np.random.seed(None)
 indices = np.arange(X_normalizado.shape[0])
@@ -99,13 +99,13 @@ plt.show()
 # ================================================================
 # 4. Monte Carlo Validation
 # ================================================================
-print("\n=== Monte Carlo (10 rodadas) ===")
+print("\n=== Monte Carlo (500 rodadas) ===")
 mc = MonteCarloValidatorMLP(
     X_normalizado, y,
-    topologia=[100,100],
+    topologia=[100,50,20],
     learning_rate=5e-3,
-    max_epoch=900,
-    R=10,
+    max_epoch=300,
+    R=500,
     random_state=None
 )
 
